@@ -1,3 +1,41 @@
+1. What is destructuring? why would you use it?
+   to re-generate an array with fewer and more
+2. What library renders React to the web?
+   react-dom
+3. Var is dead? Why? What should you use instead?
+   var is scoped to the module/file. let and const are guarded by scope blocks
+4. How should you copy an object? Is it a deep or shallow copy?
+   spread operator. it is a shallow copy
+5. What tool did we use to generate our React app?
+   create-react-app
+6. What is babel? Why should we use it?
+   a utility to bundle all the html/css/js/etc files together into a small code base for deployment
+7. converts ES5+ javascript to javascript that is compatible with older browsers
+8. Prettier. autoformatting standardizes code so that
+9. WHat hook did we useuseState
+10. When does react re-render?
+    Periodically, based on when it's most efficient/useEffect
+11. useEffect
+12. we did not set it up to only run once...it would loop into setState, setState called useEffect
+13. JSONServer
+    makes fetches realistic and persists data
+14. What tool did we use to make an HTTP call?
+    fetch
+15. What is React's flavor of HTML?
+    JSX
+16. Name at least 3 differences class > className; for > htmlFor; object styles are camel cased (not kebab-cased)
+17. Is JSX required?
+    no
+18. What is JSX compiled down to?
+    javascript - react.createElement
+19. What tool is checking our code quality?
+    ESLint. yes. good question
+20. Debugging:
+    add "debugger" on the line where you'd like to break; reload the page using Chrome DevTools
+21. no - it's using
+22. predicate
+23. map, every,
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

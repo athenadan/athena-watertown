@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getUsers } from "./api/userApi";
+import { getUsers, deleteUser } from "./api/userApi";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -16,26 +16,42 @@ function App() {
   };
 
   function handleDelete(id) {
-    const newUsers = users.filter(user => user.id !== id);
-    setUsers(newUsers); // update State so react knows to rerender
+    // debugger;
+    // setUsers(newUsers); // update State so react knows to rerender
+    deleteUser(id).then(() => {
+      const newUsers = users.filter(user => user.id !== id);
+      setUsers(newUsers);
+    });
   }
 
   return (
     <>
       <h1 className="header" style={h1Style}>
-        users
+        People
       </h1>
-      <ul>
-        {users.map(user => (
-          <li>
-            <button onClick={() => handleDelete(user.id)}>Delete</button>
-            {user.name}
-          </li>
-        ))}
-      </ul>
-      <label htmlFor="firstName">First name </label>
-      <input id="firstName" type="text"></input>
-      <p>My App.</p>
+      {/* display user data in table that shows id, name, and email */}
+      <table className="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map(user => (
+            <tr key={user.id}>
+              <td>
+                <button onClick={() => handleDelete(user.id)}>Delete</button>
+              </td>
+              <td>{user.id}</td>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 }
