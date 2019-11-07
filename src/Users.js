@@ -46,6 +46,9 @@ function Users() {
             <tr key={user.id}>
               <td>
                 <button onClick={() => handleDelete(user.id)}>Delete</button>
+                <Link to={"/user/" + user.id}>
+                  <button>Edit</button>
+                </Link>
               </td>
               <td>{user.id}</td>
               <td>{user.name}</td>
