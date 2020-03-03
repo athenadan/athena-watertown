@@ -1,29 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { getUsers, deleteUser } from "./api/userApi";
+import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function Users() {
-  const [users, setUsers] = useState([]);
-
-  // useEffect runs by default after every render
-  useEffect(() => {
-    // using _users to avoid confusion with "users" above
-    getUsers().then(_users => setUsers(_users));
-  }, []);
-
+function Users({ users, deleteUser }) {
   const h1Style = {
     color: "red",
     marginBottom: 20
   };
-
-  function handleDelete(id) {
-    // debugger;
-    // setUsers(newUsers); // update State so react knows to rerender
-    deleteUser(id).then(() => {
-      const newUsers = users.filter(user => user.id !== id);
-      setUsers(newUsers);
-    });
-  }
 
   return (
     <>
@@ -45,9 +28,19 @@ function Users() {
           {users.map(user => (
             <tr key={user.id}>
               <td>
-                <button onClick={() => handleDelete(user.id)}>Delete</button>
+                <button
+                  aria-label={`Delete user ${user.name}`}
+                  onClick={() => deleteUser(user.id)}
+                >
+                  Delete
+                </button>
                 <Link to={"/user/" + user.id}>
-                  <button>Edit</button>
+                  <button>
+                    Edit{" "}
+                    <span role="img" aria-label="edit">
+                      ✏️
+                    </span>
+                  </button>
                 </Link>
               </td>
               <td>{user.id}</td>
@@ -60,5 +53,10 @@ function Users() {
     </>
   );
 }
+
+Users.propTypes = {
+  users: PropTypes.array.isRequired,
+  deleteUser: PropTypes.func.isRequired
+};
 
 export default Users;
