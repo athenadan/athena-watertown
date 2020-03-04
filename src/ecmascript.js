@@ -21,7 +21,7 @@ const cars = [
   { make: "Porsche", model: "911 turbo" },
   { make: "toyota", model: "Supra" }
 ];
-console.log(cars);
+// console.log(cars);
 console.log(cars);
 const [honda, , third] = cars;
 console.log(third);
