@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Dan",
+      "email": "d@r.com"
+    },
+    {
+      "id": 2,
+      "name": "Sarah",
+      "email": "s@k.com"
+    },
+    {
+      "id": 3,
+      "name": "Jeff",
+      "email": "j@b.com"
+    },
+    {
+      "id": 4,
+      "name": "Steve",
+      "email": "s@m.com"
+    },
+    {
+      "id": 5,
+      "name": "Dave",
+      "email": "d@m.com"
+    },
+    {
+      "id": 6,
+      "name": "Jorge",
+      "email": "j@t.com"
+    },
+    {
+      "id": 7,
+      "name": "Karina",
+      "email": "k@c.com"
+    },
+    {
+      "id": 8,
+      "name": "Riles",
+      "email": "j@r.com"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "joangirl",
+      "email": "s@k.com"
+    },
+    {
+      "name": "me",
+      "email": "me@be.com",
+      "id": 8
+    },
+    {
+      "name": "Dan",
+      "email": "dan@a.com",
+      "id": 9
+    },
+    {
+      "name": "dan",
+      "email": "is@the.best",
+      "id": 10
+    },
+    {
+      "name": "merberg",
+      "email": "a@b.c",
+      "id": 11
+    },
+    {
+      "name": "jorge",
+      "email": "j@c.c",
+      "id": 12
+    },
+    {
+      "name": "dn",
+      "email": "a@b.c",
+      "id": 13
+    }
+  ]
+}
